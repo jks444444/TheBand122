@@ -175,7 +175,7 @@ html{
     background-color: blanchedalmond;
     padding-top: 50%; /* khi kéo mở rộng trang web thì kích thước của chiều dài luôn gấp đôi kích thước của chiều rộng  */
     margin-top: 46px;
-    background: url('/assets/img/map2.jpg') top center/ cover no-repeat ;/*back ground url , back ground position, back ground repeat */
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/LinkinParkBerlin2010.jpg/1920px-LinkinParkBerlin2010.jpg') top center/ cover no-repeat ;/*back ground url , back ground position, back ground repeat */
     
 }
 #slider .text-content{
