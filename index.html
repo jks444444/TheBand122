@@ -1,0 +1,319 @@
+<!-- NHỮNG THÀNH PHẦN THƯỜNG GĂP TRÊN GIAO DIỆN WEB 
+    1.HEADER (ĐẦU TRANG )
+    2.NAVIGATION ( PHẦN ĐIỀU HƯỚNG CỦA TRANG)
+    3.BREADCRUMB ( CHỈ CHO CÁC BẠN BIẾT BẠN ĐANG Ở ĐÂU TRONG WEB SITE : KHÓA HỌC > HTML, CSS )
+    4.SIDEBAR (NAVIGATION CON CỨ LÀ MỘT THANH BÊN TRÁI HOẶC BÊN PHẢI MÀN HÌNH ĐƯỢC GỌI LÀ SIDEBAR  )
+    5.SLIDER ( PHẦN TRƯỢT TRƯỢT CÓ THỂ NỘI DUNG LÀ ẢNH LÀ VIDEO CỨ LÀ DẠNG TRƯỢT LÀ SLIDER THÔNG THƯỜNG SẼ LÀ PHẦN HÌNH ẢNH)
+    .BANNER ( ẢNH QUẢNG CÁO )
+    6.FOOTER ( PHẦN CHÂN TRANG Ở CUỐI TRANG WEB )
+    7.CONTENT ( NỘI DUNG CHÍNH CỦA TRANG WEB)
+
+-->
+<!-- 1. Phân tích 
+        1. Header : tạm ổn 
+        2. Slider 
+        3. Content
+            - About
+            - Tour 
+            - Contact 
+            - Image
+            - Footer  
+        4. Footer
+    2.  Dựng base 
+    3.  Xây dựng từng phần theo phân tích 
+    4.  Hoàn thiện 
+   
+
+
+-->
+<!--Relative : Lấy vị trí của mình làm tọa độ gốc ( không phụ thuộc vào ai | 
+     di chuyển tự do ) + Top , Right , Bottom , Left
+     => chỉ hoạt động khi có position
+    Thẻ con ( absolute ) sẽ coi thẻ cha gần nó nhất có postion và lấy 
+    position của thẻ cha đó làm góc tọa độ
+
+https://www.w3schools.com/w3css/tryw3css_templates_band.htm
+    -->
+
+
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/styles.css"> 
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css" >
+    <title>Linkin Park</title>
+</head>
+<body>
+    <div id="main">   <!-- thẻ bọc tất cả các thẻ trong chuong trình  -->
+        
+        <div id="header"> 
+            <!--Begin: nav -->
+          <ul id="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#band">Band</a></li>    <!--DÙNG ID ĐỂ LINK ĐẾN -->
+            <li><a href="#tour">Tour</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="#">
+                    More 
+                    <i class="nav-arrow-down ti-angle-down"></i>  <!--the i la chu nghieng -->
+                </a>
+                <ul class="subnav">
+                    <li><a href="">Merchandise</a></li>
+                    <li><a href="">Extras</a></li>
+                    <li><a href="">Media</a></li>
+                </ul>
+
+
+            </li>
+          </ul>
+          <!-- End Nav -->
+          <!-- Begin-Search button -->
+                <div class="search-button">
+                    <i class="search-icon ti-search"></i>
+                </div>
+          <!-- End-Search button -->
+
+        </div>
+
+
+        <div id="slider">
+            <div class="text-content">
+                <h2 class="text-heading">Berlin</h2>
+                <div class="text-description">Thank you Berlin, the night we won't forget</div>
+            </div>
+        </div>
+
+        <div id="content"> 
+            <!-- About section -->
+            <div id="band" class="content-section">
+                <h2 class="section-heading">The Band</h2>
+                 <p class="section-sub-heading">We love music</p>
+                 <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            
+            <div class="row member-list">
+
+                <div class="col col-third text-center">
+                    <p class="member-name">Dinh Anh Duc</p>
+                    <img src="./assets/img/duc.jpg" alt="" class="member-img">
+                </div>
+                <div class="col col-third text-center">
+                    <p class="member-name">Hoang Minh Dat</p>
+                    <img src="./assets/img/dat.jpg" alt="" class="member-img">
+                </div>
+                <div class="col col-third text-center">
+                    <p class="member-name">Nguyen Tien Thuan </p>
+                    <img src="./assets/img/thuan.jpg" alt="" class="member-img">
+                </div>
+                <div class="col col-third text-center">
+                    <p class="member-name">Tran Trong Trinh</p>
+                    <img src="./assets/img/trinh.jpg" alt="" class="member-img">
+                </div>
+                <div class="col col-third text-center">
+                    <p class="member-name">Pham Anh Quan </p>
+                    <img src="./assets/img/thuan.jpg" alt="" class="member-img">
+                </div>
+              
+                
+            </div>
+            </div>
+            <!--Tour Section -->
+            <!-- Quantity: số lượng ở đây chỉ số lượng vé còn lại -->
+            <div id="tour"  class="tour-section">
+                <div class="content-section">
+                    <h2 class="section-heading text-white">Tour Dates</h2>
+                    <p class="section-sub-heading text-white">Remember to book your tickets!</p>
+                    <!--Tickets list -->
+                    <ul class="tickets-list">
+                        <li>September <span class="sold-out ">Sold out</span></li>
+                        <li>October <span class="sold-out">Sold out</span></li>
+                        <li>November <span class="quantity">3</span></li> 
+                    </ul>
+                    <!-- Places -->
+                    <div class=" row place-list">
+                        <div class="col col-third">
+                            <img src="/W3_BAND/assets/img/ny.jpg" alt="" class="place-img">
+                            <div class="place-content">
+                                <h3 class="place-heading">New York </h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button href="#" class="place-buy-button js-buy-tickets">Buy tickets</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row place-list">
+                        <div class="col col-third">
+                            <img src="/W3_BAND/assets/img/pr.jpg" alt="" class="place-img">
+                            <div class="place-content">
+                                <h3 class="place-heading">New York </h3>
+                                <p class="place-time">Sun 29 Nov 2016</p>
+                                <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button href="#" class="place-buy-button js-buy-tickets">Buy tickets</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" row place-list">
+                        <div class="col  col-third">
+                            <img src="/W3_BAND/assets/img/sf.jpg" alt="" class="place-img">
+                            <div class="place-content">
+                                <h3 class="place-heading">New York </h3>
+                                <p class="place-time">Sat 28 Nov 2016</p>
+                                <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button href="#" class="place-buy-button js-buy-tickets">Buy tickets</a>
+                               
+                            </div>                  
+                        </div>
+                        <div class="clear"></div> <!-- dùng để cho places -list có thể ôm trọn được tất cả hình
+                                                     vì thuộc tính float chỉ đẩy hình lên chứ kh cho ôm lại-->
+                    </div>
+
+
+
+                </div>
+            </div>
+           
+            <!-- Begin Contact Section -->
+            <div id="contact" class="content-section">
+                <h2 class="section-heading">CONTACT</h2>
+                <p class="section-sub-heading">Fan? Drosp a note!</p>
+                <div class="row contact-content">
+                    <div class="col col-second contact-infor">
+                        <p><i class="ti-comments-smiley"></i>Pham Anh Quan</p>
+                        <p><i class="ti-location-pin"></i> District 9, Ho Chi Minh </p>
+                        <p><i class="ti-mobile"></i>+8462001408</p>
+                        <p><i class="ti-email"></i>nguyendat13372@gmail.com</p>
+
+
+                    </div>
+                    <div class="col col-second contact-form">
+                        <form action="">
+                            <div class="row">
+                                <div class="col col-second "> <!--PLACEHOLDER : GIỮ CHỖ -->
+                                    <input type="text" name="" placeholder="Name" required id="" class="form-control"> 
+                                    
+                                </div>
+                                <div class="col col-second ">
+                                    <input type="email" name="" placeholder="Email" required  id="" class="form-control"> 
+
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-full mt-16px ">
+                                    <input type="text" name="" placeholder="Message" required id="" class="form-control"> 
+                                </div>
+                            </div>
+                            <input type="submit" class="mt-16px form-submit-btn" value="SEND"> <!--NÚT SEND -->
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- End Contact Section -->
+            <div class="map-section ">
+                <img src="./assets/img/map2.jpg" alt="map">
+            </div>
+               
+        </div>
+    
+        <div class="footer">
+             <div class="social-lists">
+                <a href="https://www.facebook.com/phamquan0607/"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/_.2u4n._/"><i class="ti-instagram"></i></a>
+                <a href="https://mail.google.com/mail/u/1/#inbox"><i class="ti-google"></i></a>
+                <a href="https://www.youtube.com/channel/UCXXQ1YNTKi2cOLj1ahihd6Q"><i class="ti-youtube"></i></a>
+                <a href="https://twitter.com/PhamAnh75054979"><i class="ti-twitter-alt"></i></a>
+                <a href=""><i class="ti-reddit"></i></a>
+                <p class="copyright"> Powered by: <a href="https://www.facebook.com/phamquan0607/">PhamQuan</a> </p>
+             </div>
+
+            
+        </div>
+    </div> 
+        <!-- Buy tickets-->
+        <div class="modal js-modal">   <!--MODAL : PHƯƠNG THỨC-->
+           <div class="modal open">
+            <div class="modal-container js-modal-container ">  <!--Container: THÙNG CHỨA -->
+                <div class="modal-close js-modal-close ">
+                    <i class="ti-close "></i>
+                </div>
+
+                <header class="modal-header"> 
+                    <i class="modal-bag ti-bag"></i>  <!-- hình cái túi -->
+                    Tickets
+                </header>
+                
+                <div class="modal-body">
+                    <label for="tickets-quantity" class="modal-label"> <!--LÚC LỰA CHỌN SẼ FOCUS VÀO CÁI ID TƯƠNG ỨNG -->
+                        <i class="ti-shopping-cart"></i>
+                        Tickets, $15 per person
+                    </label>
+                    <input id="tickets-quantity" type="numberS" class="modal-input" placeholder="How many? "> <!--Placeholder: GIỮ CHỖ -->
+                    <!--QUANTITY: SỐ LƯỢNG -->
+
+                    <label for="tickets-email" class="modal-label"><!--LÚC LỰA CHỌN SẼ FOCUS VÀO CÁI ID TƯƠNG ỨNG -->
+                        <i class="ti-user"></i>
+                        Send To
+                    </label>
+                    <input  id="tickets-email" type="email" class="modal-input" placeholder="Enter email...."> <!--Placeholder: GIỮ CHỖ -->
+                    <button id="buy-tickets">
+                        Pay
+                        <i class="ti-check"></i>
+                    </button>
+                </div>
+
+                <footer class="modal-footer">
+                    <p class="modal-help"> Need <a href="#" >help?</a></p>
+
+                </footer>
+
+            </div>
+        </div>
+        </div>
+       
+        <script>
+            const buyBtns = document.querySelectorAll('.js-buy-tickets')
+            const modal = document.querySelector('.js-modal')
+            const modalContainer = document.querySelector('.js-modal-container')
+            const modalClose = document.querySelector('.js-modal-close')
+
+            //HÀM HIỂN THỊ MODAL MUA VÉ (THÊM CLASS OPEN VÀO MODAL )           
+            function showBuyTickets(){
+                modal.classList.add('open')
+            }
+
+            //HÀM ẨN MODAL MUA VÉ ( GỠ BỎ CLASS OPEN CỦA MODAL )
+            function hideBuyTickets(){
+                modal.classList.remove('open')
+            }
+
+            //LẶP QUA TỪNG THẺ BUTTON VÀ NGHE HÀNH VI CLICK
+            for(const buyBtn of buyBtns) {  
+
+                buyBtn.addEventListener('click',showBuyTickets)
+
+            }
+            //NGHE HÀNH VI CLICK VÀO BUTTON CLOSE 
+            modalClose.addEventListener('click',hideBuyTickets)
+
+            modal.addEventListener('click',hideBuyTickets)
+
+            //NGHE HÀNH VI CLICK RA BÊN NGOÀI MODAL SẼ OUT PHẦN BUY TICKETS
+            modalContainer.addEventListener('click', function(event){  
+                event.stopPropagation() //  PROPAGATION : LAN TRUYỀN    
+            })
+
+        </script>
+</body>
+</html>
